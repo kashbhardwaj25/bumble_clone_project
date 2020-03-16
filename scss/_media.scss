@@ -1,0 +1,159 @@
+@media (max-width: 1200px) {
+  #section {
+    &-a {
+      .section-a-container {
+        .date {
+          h3 {
+            top: 50%;
+          }
+        }
+
+        .bizz {
+          h3 {
+            top: 50%;
+          }
+        }
+
+        .friends {
+          h3 {
+            top: 50%;
+          }
+        }
+      }
+    }
+
+    &-b {
+      background: url(../img/beekind.jpeg) no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+
+      .why-bumble {
+        position: static;
+        text-align: center;
+      }
+    }
+
+    &-d {
+      .instagram {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  #navbar {
+    justify-content: center;
+
+    ul {
+      display: none;
+    }
+  }
+}
+
+// Tablets
+@media (max-width: 768px) {
+  .lead {
+    height: 170px;
+  }
+
+  h1 {
+    font-size: 29px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  #showcase {
+    .showcase-content {
+      width: 90%;
+      margin: auto;
+      padding: 1.5rem 3rem 1rem 3rem;
+
+      p {
+        display: none;
+      }
+
+      .btn-web {
+        display: none;
+      }
+
+      .btn-android {
+        display: inline-block;
+        padding: 11px 20px;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  #section {
+    &-b {
+      align-items: flex-end;
+
+      .why-bumble {
+        position: static;
+        width: 100%;
+        padding: 1rem;
+      }
+    }
+
+    &-c {
+      align-items: flex-end;
+
+      .first-move {
+        width: 100%;
+      }
+    }
+
+    &-d {
+      .instagram {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    &-e {
+      .phone-number {
+        .join {
+          display: none;
+        }
+
+        .btn-android {
+          display: inline-block;
+          padding: 11px 20px;
+        }
+      }
+
+      .socials {
+        flex-direction: column;
+
+        img {
+          display: block;
+          margin: auto;
+        }
+      }
+    }
+  }
+}
+
+// Smartphones
+@media (max-width: 600px) {
+  .lead {
+    height: 70px;
+  }
+
+  #section {
+    &-a {
+      .section-a-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 3rem;
+      }
+    }
+  }
+}

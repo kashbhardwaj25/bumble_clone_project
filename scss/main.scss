@@ -1,0 +1,334 @@
+@import "config";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import "utilities";
+@import "buttons";
+
+body {
+  font-family: $font-family;
+  line-height: 19px;
+}
+
+h1,
+h2,
+h3,
+p {
+  color: $dark-color;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  margin: 30px 20px;
+}
+
+p,
+a {
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+  font-weight: bolder;
+}
+
+ul {
+  list-style: none;
+}
+
+// Navbar
+#navbar {
+  display: flex;
+  position: sticky;
+  background: $light-color;
+  top: 0;
+  z-index: 1;
+  justify-content: space-between;
+  height: 70px;
+
+  img {
+    width: 190px;
+    height: 45px;
+    margin: auto 0;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+
+    li {
+      a {
+        display: inline-block;
+        padding: 25px 15px;
+        transition: 0.3s ease-out;
+
+        &:hover {
+          color: $main-color;
+        }
+      }
+
+      // Download link: Last Child
+      &:last-child {
+        background: $main-color;
+        transition: 0.3s ease-out;
+
+        &:hover {
+          background: $dark-color;
+        }
+
+        a {
+          color: $light-color;
+        }
+      }
+    }
+  }
+}
+
+// Showcase Area
+#showcase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 91vh;
+  background: url(../img/73028315.jpeg) no-repeat center center/cover;
+
+  .showcase-content {
+    text-align: center;
+    background: rgba($color: $light-color, $alpha: 0.9);
+    padding: 3rem 3rem 2rem 3rem;
+
+    .btn-android {
+      display: none;
+    }
+  }
+}
+
+#section {
+  //Section A
+  &-a {
+    margin: 30px 0;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .section-a-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 0.5rem;
+      width: 100%;
+      overflow: hidden;
+
+      .date {
+        &-image {
+          position: relative;
+          max-width: 100%;
+
+          h3 {
+            position: absolute;
+            background: $light-color;
+            left: 0;
+            top: 50%;
+            padding: 10px 20px;
+          }
+
+          img {
+            max-width: 100%;
+          }
+        }
+        &-content {
+          .btn-main {
+            padding: 11px 20px;
+          }
+        }
+      }
+
+      .bizz {
+        &-image {
+          position: relative;
+          max-width: 100%;
+
+          h3 {
+            position: absolute;
+            background: $light-color;
+            left: 0;
+            top: 75%;
+            padding: 10px 20px;
+          }
+
+          img {
+            max-width: 100%;
+          }
+        }
+        &-content {
+          .btn-main {
+            padding: 11px 20px;
+          }
+        }
+      }
+
+      .friends {
+        &-image {
+          position: relative;
+          max-width: 100%;
+
+          h3 {
+            position: absolute;
+            background: $light-color;
+            left: 0;
+            top: 15%;
+            padding: 10px 20px;
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+
+        &-content {
+          .btn-main {
+            padding: 11px 20px;
+          }
+        }
+      }
+    }
+  }
+
+  // Section B
+  &-b {
+    position: relative;
+    height: 91vh;
+    background: url(../img/beekind.jpeg) no-repeat;
+
+    .why-bumble {
+      position: absolute;
+      right: 0;
+      top: 150px;
+      width: 50%;
+      text-align: left;
+      background: $light-color;
+      padding: 3rem 3rem 2rem 3rem;
+
+      p {
+        margin-left: 0;
+      }
+
+      a {
+        margin-left: 0;
+        padding: 11px 25px;
+      }
+    }
+  }
+
+  // Section C
+  &-c {
+    height: 91vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/62050791.jpeg) no-repeat center center/cover;
+
+    .first-move {
+      text-align: center;
+      background: $light-color;
+      padding: 3rem 3rem 2rem 3rem;
+
+      .btn-main {
+        padding: 11px 25px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  // Section D
+  &-d {
+    padding: 60px 0;
+    overflow: hidden;
+    max-width: 100%;
+
+    .instagram {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 0.5rem;
+      max-width: 100%;
+
+      .post {
+        width: 100%;
+      }
+    }
+  }
+
+  // Section E
+  &-e {
+    margin-bottom: 20px;
+
+    .phone-number {
+      margin: 30px 0 60px 0;
+
+      form {
+        div {
+          input[type="tel"] {
+            padding: 7px 50px;
+            border: 3px solid $main-color;
+            outline: none;
+          }
+
+          .btn-main {
+            padding: 9px 25px;
+          }
+        }
+      }
+
+      .btn-android {
+        display: none;
+      }
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 25px;
+
+      img {
+        width: 190px;
+        margin-right: 100px;
+      }
+
+      .social-media {
+        padding-top: 10px;
+
+        .fab {
+          padding: 0 10px;
+          border-radius: 20%;
+          transition: 0.3s ease-out;
+        }
+
+        i[class^="fab"]:hover {
+          color: $main-color;
+        }
+      }
+    }
+    .footer-content {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@import "media";
